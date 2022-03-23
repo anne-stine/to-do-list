@@ -6,6 +6,10 @@ const completedBtn = document.querySelector("#completed-btn")
 const sortBtn = document.querySelector("#sort-btn")
 const tasksArea = document.querySelector("#tasks-area")
 
+let allTasks = []
+let completedTasks = []
+
+
 
 const addTask = () =>
 {
@@ -36,9 +40,15 @@ const addTask = () =>
 
 const changeTaskStatus = () =>
 {
-    this.checked == true
-    ? console.log("checked")
-    : console.log("unchecked")
+    if (this.checked == true) {
+        console.log("checked")
+        // this.nextElementSibling.strike() // Strike out text
+        // Move task to completedTasks
+    } else {
+        console.log("unchecked")
+        // Remove text strikeout
+        // Move task to allTasks
+    }
 }
 
 
