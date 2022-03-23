@@ -1,0 +1,58 @@
+body
+{
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 10px;
+}
+
+h1,
+p,
+label,input,
+.btn
+{
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    line-height: auto;
+    margin: 0;
+}
+
+.btn
+{
+    border: none;
+    padding: 5px, 10px;
+}
+
+.chip-btn
+{
+    background: #ebebeb;
+    border-radius: 50px;
+}
+
+.task
+{
+    background: #fff;
+    height: 52px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* border-radius: 5px; */
+}
+
+/* input[type="checkbox"]
+{
+    appearance: none;
+    height: 24px;
+    width: 24px;
+    border: 2px solid #969696;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+input:checked
+{
+    border: 2px solid #4ecd97;
+    background: #4ecd97;
+    color: #fff;
+} */

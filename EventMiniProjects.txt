@@ -1,0 +1,38 @@
+------------------------------
+    JS Events Mini Projects
+------------------------------
+
+------------------------------
+    Drum Kit:
+------------------------------
+
+Use keydowns to begin playing a specific sound.  
+
+If another key is pressed the first sound should stop playing and the next sound should start.  
+
+Style it up with little animations on each keypress!
+
+------------------------------
+	To Do List:
+------------------------------
+
+Build a  to-do list.  Render the “to dos” from an input to a list when enter is pressed or a button is click. 
+Also, a delete and/or cross out button for the “to do” item.  
+
+Create a button that sorts “to dos” in alphabetical order or the reverse. 
+You can also make a drop down that organizes by multiple different categories such as date added or even urgency 
+(this would be a field users fill out on creation)!
+
+Create a search filter to look for specific items in your to do list.  
+
+------------------------------
+	Dino Jump:
+------------------------------
+
+Build a dino jump game.  Try to do this on your own first, without using youtube or other outside materials.  
+Think about how to make an object move up or down in css and how we would use js to do this.  
+Think about how we can use the event properties of the event object to check if our object is in a specific position relative to another object. 
+
+If you manage to build this add a score tracker and play again button.
+
+If you’re feeling ambitious add a double jump ability and incoming blocks at different heights to make your game more exciting!
