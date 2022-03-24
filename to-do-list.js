@@ -1,18 +1,19 @@
-/* DOM elements */
 const input = document.querySelector("#input")
 const addBtn = document.querySelector("#add-btn")
-const allBtn = document.querySelector("#all-btn")
-const completedBtn = document.querySelector("#completed-btn")
-const sortBtn = document.querySelector("#sort-btn")
 const tasksArea = document.querySelector("#tasks-area")
 
+/* Storage place for all tasks/labels */
 let allTasks = []
-let completedTasks = []
-
 
 
 const addTask = () =>
 {
+    if (!input.value){alert("Please write something");return}
+
+    /* Add value to allTasks array */
+    allTasks.push(input.value)
+    console.log(allTasks)
+    
     /* Create container */
     let task = document.createElement("div")
     task.setAttribute("class", "task")
@@ -21,11 +22,11 @@ const addTask = () =>
     let checkbox = document.createElement("input")
     checkbox.setAttribute("type", "checkbox")
     
-    /* Create label from input value */
+    /* Create label from last element in allTasks array */
     let label = document.createElement("label")
     label.setAttribute("for", "checkbox")
-    label.textContent = input.value
-
+    label.textContent = allTasks.slice(-1)
+    
     /* Combine elements */
     tasksArea.append(task)
     task.append(checkbox, label)
@@ -33,21 +34,22 @@ const addTask = () =>
     /* Reset input field */
     input.value = ""
 
+    /* Refocus input field once task is added */
+    input.focus()
+
     /* Event listener for checkbox */
-    checkbox.addEventListener("change", changeTaskStatus)
+    checkbox.addEventListener("change", (e) => changeTaskStatus(e))
 }
 
 
-const changeTaskStatus = () =>
+const changeTaskStatus = (e) =>
 {
-    if (this.checked == true) {
-        console.log("checked")
-        // this.nextElementSibling.strike() // Strike out text
-        // Move task to completedTasks
+    if (e.target.checked == true) {
+        /* Change class and appearance */
+        e.target.parentNode.classList.add("completed")
     } else {
-        console.log("unchecked")
-        // Remove text strikeout
-        // Move task to allTasks
+        /* Remove given class and appearance */
+        e.target.parentNode.classList.remove("completed")
     }
 }
 
