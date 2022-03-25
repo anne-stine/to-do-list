@@ -13,18 +13,18 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,700&family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <section>
+    <div class="container">
         <h1>My list</h1>
-
-        <input type="text" name="input" id="input" autofocus>
-        <button type="submit" id="add-btn" class="btn">Add to list</button>
-
+        <div class="flex-row">
+            <input type="text" name="input" id="input" autofocus>
+            <button type="submit" id="add-btn" class="btn">Add to list</button>
+        </div>
         <div id="tasks-area"></div>
-    </section>
+    </div>
 
     <!-- Script -->
     <script src="to-do-list.js"></script>
